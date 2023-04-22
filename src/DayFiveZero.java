@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import static java.lang.System.exit;
 
 public class DayFiveZero extends DayFiveInput{
     public static void main(String[] args) {
@@ -24,9 +23,20 @@ public class DayFiveZero extends DayFiveInput{
                     float r=scanner.nextFloat();
                     dayFiveZero.area(r);
                     break;
-                case 2:
-                    break;
                 case 3:
+                    System.out.println("Welcome to Square Operation");
+                    System.out.println("Enter the side :: ");
+                    int rr=scanner.nextInt();
+                    dayFiveZero.area(rr);
+                    break;
+
+                case 2:
+                    System.out.println("Welcome to Rectangle Operation");
+                    System.out.println("Enter the length :: ");
+                    int rrr_1=scanner.nextInt();
+                    System.out.println("Enter the breadth :: ");
+                    int rrr_2=scanner.nextInt();
+                    dayFiveZero.area(rrr_1,rrr_2);
                     break;
                /* case 0:
                     exit(0);
