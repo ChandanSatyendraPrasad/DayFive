@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+import static java.lang.System.exit;
 
-public class DayFiveZero extends DayFiveInput{
+
+public class DayFiveZero extends DayFiveInput implements SirCumFace{
     public static void main(String[] args) {
         System.out.println("Welcome to my Systems");
         int ch;
@@ -12,7 +14,7 @@ public class DayFiveZero extends DayFiveInput{
             System.out.println("1. Circle");
             System.out.println("2. Rectangle");
             System.out.println("3. Square");
-            System.out.println("0. Exit");
+            System.out.println("9. Exit");
             System.out.println("Entre your choice :: ");
             ch=scanner.nextInt();
             switch(ch)
@@ -22,12 +24,14 @@ public class DayFiveZero extends DayFiveInput{
                     System.out.println("Enter the radius :: ");
                     float r=scanner.nextFloat();
                     dayFiveZero.area(r);
+                    dayFiveZero.circumference(r);
                     break;
                 case 3:
                     System.out.println("Welcome to Square Operation");
                     System.out.println("Enter the side :: ");
                     int rr=scanner.nextInt();
                     dayFiveZero.area(rr);
+                    dayFiveZero.perimeter(rr);
                     break;
 
                 case 2:
@@ -37,11 +41,27 @@ public class DayFiveZero extends DayFiveInput{
                     System.out.println("Enter the breadth :: ");
                     int rrr_2=scanner.nextInt();
                     dayFiveZero.area(rrr_1,rrr_2);
+                    dayFiveZero.perimeter(rrr_1,rrr_2);
                     break;
-               /* case 0:
-                    exit(0);
-                    break;*/
+              /*  default:
+                    exit(0);*/
             }
-        }while (ch!=0);
+        }while (ch!=9);
+    }
+
+
+    @Override
+    public void perimeter(int a, int b) {
+        System.out.println("Perimeter :: "+(2*(a+b)));
+    }
+
+    @Override
+    public void circumference(float a) {
+        System.out.println("Circumference :: "+(2*a*3.14));
+    }
+
+    @Override
+    public void perimeter(int a) {
+        System.out.println("Perimeter :: "+(4*a));
     }
 }
