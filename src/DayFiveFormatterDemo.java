@@ -1,24 +1,28 @@
 import java.util.Formatter;
+
 public class DayFiveFormatterDemo {
     public static void main(String[] args) {
         System.out.println();
         System.out.println("===== Space format specifier =====");
         System.out.println();
         Formatter formatter = new Formatter();
-        formatter.format("%d",-111);
-        System.out.println("TEST 0:: "+formatter);
+//        This class provides support for layout justification and alignment,
+//        common formats for numeric, string, and date/time data,
+//        and locale-specific output
+        formatter.format("%d", -111);
+        System.out.println("TEST 0:: " + formatter);
         formatter = new Formatter();
 
-        formatter.format("% d",-111);
-        System.out.println("TEST 1 :: "+formatter);
+        formatter.format("% d", -111);
+        System.out.println("TEST 1 :: " + formatter);
 
         formatter = new Formatter();
-        formatter.format("%d",-222);
-        System.out.println("TEST 2:: "+formatter);
+        formatter.format("%d", -222);
+        System.out.println("TEST 2:: " + formatter);
         formatter = new Formatter();
 
-        formatter.format("% d",-222);
-        System.out.println("TEST 3 :: "+formatter);
+        formatter.format("% d", -222);
+        System.out.println("TEST 3 :: " + formatter);
 
 
 //        *******************************
@@ -32,13 +36,13 @@ public class DayFiveFormatterDemo {
         // + sign specifier
         formatter = new Formatter();
         formatter.format("%+d", 111);
-        System.out.println(formatter);
+        System.out.println("TEST 4 :: " + formatter);
 
         // + sign specifier
         // on - sign, it will have no effect
         formatter = new Formatter();
         formatter.format("%+d", -111);
-        System.out.println(formatter);
+        System.out.println("TEST 5 :: " + formatter);
 
         // ================== ( specifier
         System.out.println();
@@ -48,11 +52,11 @@ public class DayFiveFormatterDemo {
         // ( Specifier
         formatter = new Formatter();
         formatter.format("%(d", -111);
-        System.out.println(formatter);
+        System.out.println("TEST 6 :: " + formatter);
 
         formatter = new Formatter();
         formatter.format("%(d", 111);
-        System.out.println(formatter);
+        System.out.println("TEST 7 :: " + formatter);
 
         // ================== Comma, Specifier
         System.out.println();
@@ -62,12 +66,12 @@ public class DayFiveFormatterDemo {
         // comma Specifier
         formatter = new Formatter();
         formatter.format("%, d", 1000000);
-        System.out.println(formatter);
+        System.out.println("TEST 8 :: " + formatter);
 
         // comma Specifier
         formatter = new Formatter();
         formatter.format("%, .3f", 32659526566.4521);
-        System.out.println(formatter);
+        System.out.println("TEST 9 :: " + formatter);
 
         // ================== Left Justification(-) Specifier
         System.out.println();
@@ -77,7 +81,7 @@ public class DayFiveFormatterDemo {
         // right justify by default
         formatter = new Formatter();
         formatter.format("|%20.4f|", 1234.1234);
-        System.out.println(formatter);
+        System.out.println("TEST 10 :: " + formatter);
 
         // left justify
         formatter = new Formatter();
@@ -187,7 +191,7 @@ public class DayFiveFormatterDemo {
 
         // Format into 10 digit
         formatter = new Formatter();
-        formatter.format("%010d", 88);
+        formatter.format("%010d", 11);
         System.out.println("value in 10 digits: " + formatter);
     }
 }
